@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MediFlow HMS</title>
+  <link rel="stylesheet" href="./css/styles.css" />
+</head>
+<body>
+  <div id="entryScreen" class="entry-screen"></div>
+
+  <div id="appShell" class="app-shell hidden">
+    <header class="topbar glass">
+      <div class="topbar-left">
+        <button id="sidebarToggle" class="icon-btn">☰</button>
+        <div>
+          <h1>MediFlow HMS</h1>
+          <p class="muted">Trusted care operations platform</p>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="search-wrap">
+          <input id="globalSearch" type="search" placeholder="Search patients, invoices, doctors..." />
+        </div>
+        <button id="filterToggle" class="btn btn-ghost">Filters</button>
+        <button id="themeToggle" class="btn btn-ghost">Theme</button>
+        <button id="notifyToggle" class="icon-btn">🔔</button>
+        <div class="profile-menu">
+          <button id="profileToggle" class="avatar-btn">AU</button>
+          <div id="profileDropdown" class="dropdown hidden">
+            <button data-action="profile">My Profile</button>
+            <button data-action="settings">Settings</button>
+            <button id="logoutBtn" data-action="logout">Logout</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <aside id="sidebar" class="sidebar glass">
+      <div class="brand-block">
+        <h2>HMS</h2>
+        <span id="roleTag" class="chip">Guest</span>
+      </div>
+      <nav id="mainNav"></nav>
+      <div class="sidebar-bottom">
+        <button id="settingsBtn" class="btn btn-ghost">Settings</button>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div id="filtersPanel" class="panel hidden"></div>
+      <section id="pageContainer" class="page fade"></section>
+    </main>
+
+    <nav id="mobileNav" class="mobile-nav"></nav>
+  </div>
+
+  <button id="fabButton" class="fab hidden">＋</button>
+
+  <aside id="notificationPanel" class="notification-panel"></aside>
+  <section id="settingsPanel" class="settings-panel hidden"></section>
+
+  <div id="modalRoot" class="modal-root hidden"></div>
+  <div id="toastRoot" class="toast-root"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
